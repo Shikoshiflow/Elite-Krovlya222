@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Elite Krovlya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html"><span class="elite">ELITE</span><span class="krovlya">KROVLYA</span></a></h1>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="catalog.html" class="nav-link active">Каталог</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="about.html" class="nav-link">О компании</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (xxx) xxx-xx-xx</span>
+                    </div>
+                    <button class="cta-button">Заказать консультацию</button>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Каталог продукции</h1>
+                <p>Широкий ассортимент премиальных кровельных и строительных материалов</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Главная</a>
+                    <span>/</span>
+                    <span>Каталог</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog">
+        <div class="container">
+            <!-- Filters -->
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    <label>Категория:</label>
+                    <select id="categoryFilter">
+                        <option value="">Все категории</option>
+                        <option value="metallocherepitsa">Металлочерепица</option>
+                        <option value="kompozitnaya">Композитная черепица</option>
+                        <option value="bitumnaya">Битумная черепица</option>
+                        <option value="vodostok">Водосточные системы</option>
+                        <option value="uteplenie">Утепление</option>
+                        <option value="paroizolyatsiya">Пароизоляция</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Цена:</label>
+                    <select id="priceFilter">
+                        <option value="">Любая цена</option>
+                        <option value="low">До 500 руб/м²</option>
+                        <option value="medium">500-1000 руб/м²</option>
+                        <option value="high">От 1000 руб/м²</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Бренд:</label>
+                    <select id="brandFilter">
+                        <option value="">Все бренды</option>
+                        <option value="ruukki">Ruukki</option>
+                        <option value="grand-line">Grand Line</option>
+                        <option value="tegola">Tegola</option>
+                        <option value="shinglas">Shinglas</option>
+                        <option value="docke">Docke</option>
+                    </select>
+                </div>
+                
+                <button class="filter-reset" id="resetFilters">Сбросить фильтры</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Металлочерепица -->
+                <div class="catalog-item" data-category="metallocherepitsa" data-price="medium" data-brand="ruukki">
+                    <div class="catalog-item-image">
+                        <img src="images/products/metal-1.jpg" alt="Металлочерепица Ruukki">
+                        <div class="product-badge">Хит продаж</div>
+                        <div class="product-overlay">
+                            <button class="btn btn-primary">Подробнее</button>
+                            <button class="btn btn-secondary">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item-info">
+                        <h3>Металлочерепица Ruukki Classic</h3>
+                        <p class="product-brand">Ruukki</p>
+                        <p class="product-description">Классическая металлочерепица с полимерным покрытием</p>
+                        <div class="product-specs">
+                            <span>Толщина: 0.5 мм</span>
+                            <span>Гарантия: 15 лет</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">750 руб/м²</span>
+                            <span class="old-price">850 руб/м²</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog-item" data-category="metallocherepitsa" data-price="high" data-brand="grand-line">
+                    <div class="catalog-item-image">
+                        <img src="images/products/metal-2.jpg" alt="Металлочерепица Grand Line">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary">Подробнее</button>
+                            <button class="btn btn-secondary">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item-info">
+                        <h3>Металлочерепица Grand Line Premium</h3>
+                        <p class="product-brand">Grand Line</p>
+                        <p class="product-description">Премиальная металлочерепица с матовым покрытием</p>
+                        <div class="product-specs">
+                            <span>Толщина: 0.6 мм</span>
+                            <span>Гарантия: 20 лет</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">1200 руб/м²</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Композитная черепица -->
+                <div class="catalog-item" data-category="kompozitnaya" data-price="high" data-brand="tegola">
+                    <div class="catalog-item-image">
+                        <img src="images/products/composite-1.jpg" alt="Композитная черепица Tegola">
+                        <div class="product-badge new">Новинка</div>
+                        <div class="product-overlay">
+                            <button class="btn btn-primary">Подробнее</button>
+                            <button class="btn btn-secondary">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item-info">
+                        <h3>Композитная черепица Tegola Master</h3>
+                        <p class="product-brand">Tegola</p>
+                        <p class="product-description">Композитная черепица с каменной крошкой</p>
+                        <div class="product-specs">
+                            <span>Вес: 2.8 кг/м²</span>
+                            <span>Гарантия: 30 лет</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">1500 руб/м²</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Битумная черепица -->
+                <div class="catalog-item" data-category="bitumnaya" data-price="medium" data-brand="shinglas">
+                    <div class="catalog-item-image">
+                        <img src="images/products/bitumen-1.jpg" alt="Битумная черепица Shinglas">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary">Подробнее</button>
+                            <button class="btn btn-secondary">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item-info">
+                        <h3>Битумная черепица Shinglas Classic</h3>
+                        <p class="product-brand">Shinglas</p>
+                        <p class="product-description">Гибкая битумная черепица с базальтовой крошкой</p>
+                        <div class="product-specs">
+                            <span>Форма: Соната</span>
+                            <span>Гарантия: 25 лет</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">650 руб/м²</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Водосточные системы -->
+                <div class="catalog-item" data-category="vodostok" data-price="medium" data-brand="docke">
+                    <div class="catalog-item-image">
+                        <img src="images/products/gutter-1.jpg" alt="Водосточная система Docke">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary">Подробнее</button>
+                            <button class="btn btn-secondary">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item-info">
+                        <h3>Водосточная система Docke Standard</h3>
+                        <p class="product-brand">Docke</p>
+                        <p class="product-description">ПВХ водосточная система 125/90 мм</p>
+                        <div class="product-specs">
+                            <span>Диаметр: 125 мм</span>
+                            <span>Материал: ПВХ</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">890 руб/п.м</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Утепление -->
+                <div class="catalog-item" data-category="uteplenie" data-price="low" data-brand="rockwool">
+                    <div class="catalog-item-image">
+                        <img src="images/products/insulation-1.jpg" alt="Утеплитель ROCKWOOL">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary">Подробнее</button>
+                            <button class="btn btn-secondary">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item-info">
+                        <h3>Утеплитель ROCKWOOL Лайт Баттс</h3>
+                        <p class="product-brand">ROCKWOOL</p>
+                        <p class="product-description">Каменная вата для утепления кровли</p>
+                        <div class="product-specs">
+                            <span>Толщина: 100 мм</span>
+                            <span>Плотность: 37 кг/м³</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">450 руб/м²</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пароизоляция -->
+                <div class="catalog-item" data-category="paroizolyatsiya" data-price="low" data-brand="tyvek">
+                    <div class="catalog-item-image">
+                        <img src="images/products/vapor-1.jpg" alt="Пароизоляция Tyvek">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary">Подробнее</button>
+                            <button class="btn btn-secondary">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item-info">
+                        <h3>Пароизоляция Tyvek VCL</h3>
+                        <p class="product-brand">Tyvek</p>
+                        <p class="product-description">Пароизоляционная мембрана</p>
+                        <div class="product-specs">
+                            <span>Ширина: 1.5 м</span>
+                            <span>Длина: 50 м</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">120 руб/м²</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Еще больше товаров -->
+                <div class="catalog-item" data-category="metallocherepitsa" data-price="medium" data-brand="grand-line">
+                    <div class="catalog-item-image">
+                        <img src="images/products/metal-3.jpg" alt="Металлочерепица Modern">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary">Подробнее</button>
+                            <button class="btn btn-secondary">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="catalog-item-info">
+                        <h3>Металлочерепица Modern</h3>
+                        <p class="product-brand">Grand Line</p>
+                        <p class="product-description">Современный профиль с высокой волной</p>
+                        <div class="product-specs">
+                            <span>Высота волны: 46 мм</span>
+                            <span>Покрытие: Polyester</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">820 руб/м²</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn prev" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    Предыдущая
+                </button>
+                <div class="pagination-numbers">
+                    <span class="page-number active">1</span>
+                    <span class="page-number">2</span>
+                    <span class="page-number">3</span>
+                    <span class="pagination-dots">...</span>
+                    <span class="page-number">8</span>
+                </div>
+                <button class="pagination-btn next">
+                    Следующая
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Нужна помощь в выборе?</h2>
+                <p>Наши специалисты помогут подобрать оптимальное решение для вашего проекта</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">Получить консультацию</button>
+                    <button class="btn btn-secondary">Рассчитать стоимость</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><span class="elite">ELITE</span><span class="krovlya">KROVLYA</span></h3>
+                        <p>Премиальные кровельные и строительные материалы</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="#">Металлочерепица</a></li>
+                        <li><a href="#">Композитная черепица</a></li>
+                        <li><a href="#">Битумная черепица</a></li>
+                        <li><a href="#">Водосточные системы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#">Монтаж кровли</a></li>
+                        <li><a href="#">Проектирование</a></li>
+                        <li><a href="#">Консультации</a></li>
+                        <li><a href="#">Гарантийное обслуживание</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (xxx) xxx-xx-xx</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@elitekrovlya.ru</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Москва, ул. Примерная, д. 123</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elite Krovlya. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Windows -->
+    <div class="modal" id="consultationModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Заказать консультацию</h3>
+            <form class="consultation-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <textarea placeholder="Комментарий"></textarea>
+                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Catalog specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const priceFilter = document.getElementById('priceFilter');
+            const brandFilter = document.getElementById('brandFilter');
+            const resetFilters = document.getElementById('resetFilters');
+            const catalogGrid = document.getElementById('catalogGrid');
+            const catalogItems = document.querySelectorAll('.catalog-item');
+
+            function filterProducts() {
+                const category = categoryFilter.value;
+                const price = priceFilter.value;
+                const brand = brandFilter.value;
+
+                catalogItems.forEach(item => {
+                    const itemCategory = item.dataset.category;
+                    const itemPrice = item.dataset.price;
+                    const itemBrand = item.dataset.brand;
+
+                    const categoryMatch = !category || itemCategory === category;
+                    const priceMatch = !price || itemPrice === price;
+                    const brandMatch = !brand || itemBrand === brand;
+
+                    if (categoryMatch && priceMatch && brandMatch) {
+                        item.style.display = 'block';
+                        item.classList.add('fade-in');
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.remove('fade-in');
+                    }
+                });
+            }
+
+            categoryFilter.addEventListener('change', filterProducts);
+            priceFilter.addEventListener('change', filterProducts);
+            brandFilter.addEventListener('change', filterProducts);
+
+            resetFilters.addEventListener('click', function() {
+                categoryFilter.value = '';
+                priceFilter.value = '';
+                brandFilter.value = '';
+                filterProducts();
+            });
+        });
+    </script>
+</body>
+</html>
